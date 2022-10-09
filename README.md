@@ -2,7 +2,7 @@
 
 The proposed self-supervised clustering technique employs the following architecture based on an LSTM language model:
 
-[](cluster-arch.svg)
+![Model architecture.](cluster-arch.svg)
 
 ## Components
 
