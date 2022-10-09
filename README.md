@@ -4,7 +4,7 @@ We propose a self-supervised clustering technique employing the following archit
 
 ![Model architecture.](cluster-arch.svg)
 
-## Components
+## Components of Note
 
 - **S**: Token-to-type embedding. $S: \\{0, 1\\}^n \mapsto \mathbb{R}^s$ is an Embedding layer which maps one-hot token ids 
   (labeled $t_1$ through $t_n$, where $n$ is the total number of tokens in the corpus) onto *s*-dimensional weight vectors. Each weight represents the likelihood that the token 
