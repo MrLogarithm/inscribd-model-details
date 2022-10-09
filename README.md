@@ -1,6 +1,6 @@
 # Model Architecture
 
-The proposed self-supervised clustering technique employs the following architecture based on an LSTM language model:
+We propose a self-supervised clustering technique employing the following architecture based on an LSTM language model:
 
 ![Model architecture.](cluster-arch.svg)
 
@@ -39,7 +39,7 @@ $$\mathcal{L}\_{LM} = CE( o, t )$$
 
 where $CE$ is categorical cross-entropy loss. $o$ is the sequence of outputs from the LSTM. The sequence of target labels, $t$, is equal to the sequence of outputs from $S$ (which are distributions over types/sign names) shifted by one time-step.
 This means that the LSTM is trained to recover the types/sign names predicted by the token-to-type embedding layer $S$.
-This self-supervised configuration is intended to guarantee that each sign represents contextually similar tokens, as combining unrelated tokens under the same label will increase the uncertainty of the following signs and decrease LM performance.
+This self-supervised approach to language modeling is intended to guarantee that each sign represents contextually similar tokens, as combining unrelated tokens under the same label will increase the uncertainty of the following signs and decrease LM performance.
 
 ## Duplicate Cluster Loss
 $$\mathcal{L}\_{dup} = \sum\_{j=1}^s \max\_{k=j+1}^s \left( 1-d(ex(j), ex(k))\right)\left(\frac{1}{n} \sum\_{i=0}^n p\_{ij}\right)$$
