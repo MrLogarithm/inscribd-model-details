@@ -7,7 +7,7 @@ The proposed self-supervised clustering technique employs the following architec
 ## Components
 
 - **S**: Token-to-type embedding. $S: \\{0, 1\\}^n \mapsto \mathbb{R}^s$ is an Embedding layer which maps one-hot token ids 
-  (labeled $t_1$ through $t_n$) onto *s*-dimensional weight vectors. Each weight represents the likelihood that the token 
+  (labeled $t_1$ through $t_n$, where $n$ is the total number of tokens in the corpus) onto *s*-dimensional weight vectors. Each weight represents the likelihood that the token 
   in question belongs to one of $s$ types. Each type is interpreted as representing a distinct sign name. The subsequent 
   softmax layer converts these weight vectors into probability distributions over types/sign names.
 - **E**: Type embedding. $E: \mathbb{R}^s \mapsto \mathbb{R}^d$ is also a standard Embedding layer. When the input to $E$ is 
