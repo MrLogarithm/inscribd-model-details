@@ -1,6 +1,6 @@
 # Model Architecture
 
-We propose a self-supervised clustering technique employing the following architecture based on an LSTM language model:
+We propose a self-supervised clustering technique which clusters tokens (individual glyphs in some script) into types (signs in the underlying script). The model employs the following architecture based on an LSTM language model:
 
 ![Model architecture.](cluster-arch.svg)
 
